@@ -11,6 +11,14 @@ router.get('/', function(req, res) {
     res.sendFile(path.join(__dirname+'/index.html'));
 })
 
+router.get('/topic', function(req, res) {
+    res.sendFile(path.join(__dirname+'/topic.html'))
+})
+
+router.get('/add', function(req, res) {
+    res.sendFile(path.join(__dirname+'/add.html'))
+})
+
 app.use('/', router);
 app.listen(process.env.port || 3000);
 console.log("Running on port 3000");
